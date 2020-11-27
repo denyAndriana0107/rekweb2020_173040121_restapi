@@ -1,0 +1,53 @@
+<?php 
+// taking data from JSON
+$data = file_get_contents("data/pizza.json");
+
+// array to JSON
+$menu = json_decode($data,true);
+$menu=$menu['menu'];
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <title>Pizza Latihan 3</title>
+ 
+</head>
+<body>
+  <nav class ="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class = "container">
+      <a class- "navbar-brand" href="#">
+        <img src ="img/logo.png" width="120">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="#">All Menu</a>
+          <a class="nav-item nav-link "href="#">Pizza</a>
+          <a class="nav-item nav-link "href="#">Pasta</a>
+          <a class="nav-item nav-link "href="#">Nasi</a>
+          <a class="nav-item nav-link "href="#">Minuman</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row mt-3">
+      <div class="col">
+        <h1>All Menu</h1>
+      </div>
+    </div>
+
+    <div class="row mt-3" id="daftar-menu">
+
+    </div>
+  </div>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
